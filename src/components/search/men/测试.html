@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+	</body>
+	<script src="../../../../static/js/jquery.js"></script>
+	<script type="text/javascript">
+	$.ajax({
+		type:"get",
+		url:"../vuex/search/men/men.json",
+		async:true,
+		dataType:'json',
+		data:{},
+		success:function(result){
+			console.log(result)
+			state.frockList.list=[
+			result.frock
+			]
+		}
+	});
+	</script>
+</html>
